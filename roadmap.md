@@ -1,4 +1,7 @@
 # Roadmap
+- [ ] Restore reference header with top offer/countdown, logo, adjacent visible phone and WhatsApp, and no navigation.
+- [ ] Apply official Hacen font and brown/gold/dark-gray brand tokens throughout.
+- [ ] Verify header at the user's viewport and mobile widths, then save changes.
 - [x] Add the confirmed WhatsApp contact +972 2 297 4992.
 - [x] Redesign the Arabic campaign page using official TABO imagery and verified offer content.
 - [x] Store enquiries securely and show an accessible success popup after confirmed submission.
