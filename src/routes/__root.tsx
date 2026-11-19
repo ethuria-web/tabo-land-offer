@@ -82,7 +82,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "طابو | أرضك في فلسطين" },
-      { name: "description", content: "أراضٍ في فلسطين مع مشروع طابو من شركة الاتحاد للإعمار والاستثمار." },
+      {
+        name: "description",
+        content: "أراضٍ في فلسطين مع مشروع طابو من شركة الاتحاد للإعمار والاستثمار.",
+      },
       { name: "author", content: "طابو" },
       { property: "og:title", content: "طابو | أرضك في فلسطين" },
       { property: "og:description", content: "تعرّف على خيارات التملّك في فلسطين مع طابو." },
@@ -97,7 +100,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "icon", href: "/favicon.png", type: "image/png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800;900&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800;900&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,
