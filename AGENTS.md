@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Application architecture
+- Keep campaign constants and phone validation in `src/lib/offer.ts` so the page and server share validated rules.
+- Enquiries use a validated public insert-only server function with a dynamically imported privileged client; lead data has no visitor read access.
+- Use reusable button variants and global semantic design tokens for all campaign controls and styling.
