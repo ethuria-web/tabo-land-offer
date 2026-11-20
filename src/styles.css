@@ -3,23 +3,28 @@
 @import "tw-animate-css";
 @custom-variant dark (&:is(.dark *));
 @font-face {
-  font-family: "TABO Arabic";
-  src: url("/__l5e/assets-v1/772e2b86-6915-46d2-ac4f-4843e768521d/tabo-arabic-regular.woff2")
-    format("woff2");
+  font-family: "Hacen";
+  src: url("/__l5e/assets-v1/7aeb63f1-b544-4499-a098-003a2e121e38/hacen-tunisia-light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Hacen";
+  src: url("/__l5e/assets-v1/4d05fa64-1709-4aeb-af6c-287c772d9410/hacen-tunisia-regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "TABO Arabic";
-  src: url("/__l5e/assets-v1/a393f7d4-e719-4987-b30c-d055bb3c257c/tabo-arabic-bold.woff2")
-    format("woff2");
+  font-family: "Hacen";
+  src: url("/__l5e/assets-v1/7804891a-06d9-4fb4-b0dd-fc21ba5509e9/hacen-tunisia-bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @theme inline {
-  --font-sans: "Hacen", "TABO Arabic", sans-serif;
+  --font-sans: "Hacen", sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
