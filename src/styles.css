@@ -2,8 +2,24 @@
 @source "../src";
 @import "tw-animate-css";
 @custom-variant dark (&:is(.dark *));
+@font-face {
+  font-family: "TABO Arabic";
+  src: url("/__l5e/assets-v1/772e2b86-6915-46d2-ac4f-4843e768521d/tabo-arabic-regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TABO Arabic";
+  src: url("/__l5e/assets-v1/a393f7d4-e719-4987-b30c-d055bb3c257c/tabo-arabic-bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 @theme inline {
-  --font-sans: "Tajawal", sans-serif;
+  --font-sans: "Hacen", "TABO Arabic", sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
@@ -29,26 +45,27 @@
 }
 :root {
   --background: oklch(1 0 0);
-  --foreground: oklch(0.27 0.025 155);
-  --primary: oklch(0.39 0.066 158);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.965 0.013 150);
-  --muted: oklch(0.975 0.004 145);
-  --muted-foreground: oklch(0.52 0.015 155);
-  --accent: oklch(0.94 0.016 150);
-  --border: oklch(0.89 0.012 145);
-  --gold: oklch(0.65 0.113 77);
+  --foreground: oklch(0.322286 0.025932 269.5402);
+  --primary: oklch(0.382422 0.075688 59.6902);
+  --primary-foreground: oklch(0.99 0.003 85);
+  --secondary: oklch(0.975 0.008 85);
+  --muted: oklch(0.986 0.003 85);
+  --muted-foreground: var(--foreground);
+  --accent: oklch(0.955 0.018 85);
+  --border: oklch(0.875 0.022 75);
+  --gold: oklch(0.623068 0.11274 76.8534);
+  --orange: oklch(0.677023 0.136539 71.2852);
   --gold-light: oklch(0.95 0.035 85);
   --destructive: oklch(0.51 0.19 25);
-  --shadow: 0 15px 45px oklch(0.25 0.025 150 / 0.08);
+  --shadow: 0 15px 45px oklch(0.3 0.025 65 / 0.08);
   --hero-wash: linear-gradient(
     270deg,
-    oklch(0.98 0.014 135 / 0.94) 0%,
-    oklch(0.98 0.014 135 / 0.85) 32%,
-    oklch(0.98 0.014 135 / 0.13) 66%,
+    oklch(0.985 0.009 85 / 0.94) 0%,
+    oklch(0.985 0.009 85 / 0.85) 32%,
+    oklch(0.985 0.009 85 / 0.13) 66%,
     transparent 100%
   );
-  --footer: oklch(0.235 0.035 156);
+  --footer: oklch(0.27 0.045 60);
 }
 * {
   box-sizing: border-box;
@@ -150,57 +167,59 @@ svg {
   background: var(--background);
   color: var(--primary);
 }
+.campaign-header {
+  background: var(--secondary);
+  border-bottom: 4px solid var(--foreground);
+}
 .header {
-  height: 96px;
+  min-height: 110px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
 }
 .logo {
-  width: 220px;
-  height: 58px;
+  width: 300px;
+  height: 70px;
   object-fit: contain;
-}
-.nav {
-  display: flex;
-  gap: 30px;
-  font-size: 14px;
-  font-weight: 600;
-}
-.nav a:hover {
-  color: var(--gold);
 }
 .header-contact {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
 }
-.phone-link {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  font-size: 14px;
+.header-contact .tabo-button {
+  min-height: 54px;
+  font-size: 17px;
+  border-radius: 8px;
 }
-.phone-link svg {
-  width: 16px;
-  color: var(--gold);
+.header-whatsapp {
+  border-color: var(--primary);
+}
+.header-phone {
+  white-space: nowrap;
 }
 .offer-bar {
   background: var(--primary);
   color: var(--primary-foreground);
-  min-height: 39px;
+  min-height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  font-size: 13px;
+  gap: 13px;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
 }
-.offer-bar svg {
-  width: 15px;
-}
-.bar-divider {
-  opacity: 0.4;
+.countdown-badge {
+  background: var(--orange);
+  color: var(--foreground);
+  border-radius: 999px;
+  padding: 3px 16px;
+  white-space: nowrap;
+  font-weight: 700;
+  line-height: 1.8;
 }
 .hero {
   position: relative;
@@ -707,7 +726,7 @@ h1 {
 }
 .quote-mark {
   font-size: 64px;
-  font-family: Georgia, serif;
+  font-family: var(--font-sans);
   color: var(--gold);
   line-height: 0.9;
 }
@@ -924,12 +943,6 @@ h1 {
   .container {
     padding-inline: 28px;
   }
-  .nav {
-    gap: 18px;
-  }
-  .header-contact .phone-link {
-    display: none;
-  }
   .hero-copy {
     max-width: 510px;
   }
@@ -963,32 +976,41 @@ h1 {
     padding-inline: 22px;
   }
   .header {
-    height: 78px;
-    gap: 12px;
+    min-height: 115px;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-block: 12px;
+  }
+  .header > a {
+    margin-left: auto;
   }
   .logo {
-    width: 170px;
-    height: 48px;
+    width: 190px;
+    height: 45px;
   }
-  .nav {
-    display: none;
+  .header-contact {
+    margin-right: auto;
+    gap: 9px;
   }
   .header-contact .tabo-button {
-    font-size: 11px;
+    font-size: 13px;
     min-height: 40px;
-    padding: 9px 12px;
+    padding: 8px 13px;
+    gap: 7px;
   }
   .header-contact .tabo-button svg {
-    display: none;
+    width: 17px;
+    height: 17px;
   }
   .offer-bar {
-    font-size: 11px;
+    font-size: 12px;
     gap: 7px;
-    padding: 5px 12px;
+    padding: 10px 15px;
+    flex-wrap: wrap;
+    min-height: 60px;
   }
-  .bar-divider,
-  .offer-bar .offer-end {
-    display: none;
+  .countdown-badge {
+    padding: 2px 12px;
   }
   .hero {
     min-height: 620px;

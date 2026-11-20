@@ -4,7 +4,6 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import {
   ArrowLeft,
-  BadgePercent,
   CalendarDays,
   Check,
   CircleCheck,
@@ -156,39 +155,41 @@ function Index() {
   }
   return (
     <>
-      <header className="container header">
-        <a href="#" aria-label="طابو — أعلى الصفحة">
-          <img src={logo.url} alt="طابو — الوطن… إلنا أصحابه" className="logo" />
-        </a>
-        <nav className="nav" aria-label="القائمة الرئيسية">
-          <a href="#offer">عرض نهاية السنة</a>
-          <a href="#lands">اختر أرضك</a>
-          <a href="#steps">كيف تتملّك؟</a>
-          <a href="#faq">أسئلة شائعة</a>
-        </nav>
-        <div className="header-contact">
-          <a className="phone-link" href={PHONE}>
-            <Phone />
-            <span dir="ltr">02 297 4992</span>
-          </a>
-          <Button asChild variant="outline">
-            <a href="#request">
-              {CTA}
-              <ArrowLeft />
-            </a>
-          </Button>
-        </div>
-      </header>
       <div className="offer-bar">
-        <BadgePercent />
+        <span className="countdown-badge" aria-live="polite">
+          {active
+            ? remaining !== null
+              ? `متبقّي ${remaining} يومًا`
+              : "حتى نهاية السنة"
+            : "انتهى العرض"}
+        </span>
         <span>
           {active
-            ? "فرصتك قبل نهاية السنة: خصم 10% على سعر الأرض الكلي"
-            : "انتهى عرض نهاية 2026 — اطلب تفاصيل الخيارات الحالية"}
+            ? "خصم 10% على سعر الأرض الكلي – ينتهي العرض 31 كانون الأول 2026"
+            : "انتهى عرض نهاية 2026 – اطلب تفاصيل الخيارات الحالية"}
         </span>
-        <span className="bar-divider">|</span>
-        <span className="offer-end">حتى 31 كانون الأول 2026</span>
       </div>
+      <header className="campaign-header">
+        <div className="container header">
+          <a href="#" aria-label="طابو — أعلى الصفحة">
+            <img src={logo.url} alt="طابو — الوطن… إلنا أصحابه" className="logo" />
+          </a>
+          <div className="header-contact">
+            <Button asChild variant="outline" className="header-whatsapp">
+              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
+                <MessageCircle />
+                واتساب
+              </a>
+            </Button>
+            <Button asChild className="header-phone">
+              <a href={PHONE}>
+                <Phone />
+                <span dir="ltr">02 297 4992</span>
+              </a>
+            </Button>
+          </div>
+        </div>
+      </header>
       <main>
         <section id="offer" className="hero">
           <img
