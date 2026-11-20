@@ -250,10 +250,20 @@ svg {
   z-index: -1;
 }
 .hero-inner {
-  padding-block: 65px 76px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 440px);
+  align-items: center;
+  gap: 48px;
+  padding-block: 44px 64px;
 }
 .hero-copy {
+  min-width: 0;
   max-width: 570px;
+}
+.hero .lead-form {
+  min-width: 0;
+  border-top: 4px solid var(--gold);
+  scroll-margin-top: 24px;
 }
 .eyebrow {
   display: flex;
@@ -405,40 +415,6 @@ h1 {
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0;
-}
-.enquiry-section {
-  background: var(--secondary);
-  padding-block: 64px;
-}
-.enquiry-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 85px;
-  align-items: center;
-}
-.enquiry-intro .section-heading {
-  max-width: 400px;
-}
-.enquiry-intro > p {
-  max-width: 440px;
-  color: var(--muted-foreground);
-  margin-top: 15px;
-}
-.enquiry-benefits {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 25px;
-  font-size: 14px;
-}
-.enquiry-benefits span {
-  display: flex;
-  gap: 9px;
-  align-items: center;
-}
-.enquiry-benefits svg {
-  width: 17px;
-  color: var(--primary);
 }
 .lead-form {
   background: var(--background);
@@ -938,7 +914,7 @@ h1 {
     min-height: 650px;
   }
   .hero-inner {
-    padding-block: 85px;
+    padding-block: 60px;
   }
   .hero-image {
     object-position: center 45%;
@@ -948,14 +924,25 @@ h1 {
   .container {
     padding-inline: 28px;
   }
+  .hero-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 390px);
+    gap: 28px;
+  }
   .hero-copy {
     max-width: 510px;
   }
   h1 {
-    font-size: 47px;
+    font-size: 40px;
   }
-  .enquiry-layout {
-    gap: 40px;
+  .hero .lead-form {
+    padding: 24px;
+  }
+  .hero .discount-copy {
+    font-size: 16px;
+  }
+  .hero-actions {
+    flex-wrap: wrap;
+    gap: 12px;
   }
   .trust-item {
     gap: 8px;
@@ -1018,11 +1005,11 @@ h1 {
     padding: 2px 12px;
   }
   .hero {
-    min-height: 620px;
+    min-height: 0;
   }
   .hero-image {
     object-position: 24% bottom;
-    height: 53%;
+    height: 420px;
     top: auto;
     bottom: 0;
   }
@@ -1030,7 +1017,9 @@ h1 {
     background: linear-gradient(180deg, var(--secondary) 0%, var(--secondary) 43%, transparent 72%);
   }
   .hero-inner {
-    padding-block: 30px 120px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    padding-block: 30px 55px;
   }
   .hero-copy {
     max-width: 100%;
@@ -1119,22 +1108,7 @@ h1 {
   .section-description {
     font-size: 13px;
   }
-  .enquiry-section {
-    padding-block: 40px;
-  }
-  .enquiry-layout {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-  .enquiry-intro > p {
-    font-size: 14px;
-  }
-  .enquiry-benefits {
-    margin-top: 17px;
-    font-size: 12px;
-    gap: 7px;
-  }
-  .lead-form {
+  .hero .lead-form {
     padding: 24px 20px;
   }
   .form-heading {

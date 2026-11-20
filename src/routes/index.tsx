@@ -242,63 +242,8 @@ function Index() {
                 الطلب للاستفسار فقط، ولا يُلزمك بالشراء
               </p>
             </div>
-          </div>
-          <div className="image-caption">
-            <MapPin size={12} />
-            من أراضي طابو في فلسطين
-          </div>
-        </section>
-        <div className="trust-strip">
-          <div className="container trust-inner">
-            {[
-              { Icon: FileCheck2, title: "سند ملكية جاهز", sub: "نتولى إجراءات التسجيل" },
-              { Icon: LandPlot, title: "انتفاع فوري بالأرض", sub: "من اليوم الأول" },
-              { Icon: Zap, title: "طرق معبّدة وكهرباء", sub: "بنية تحتية جاهزة" },
-              {
-                Icon: CalendarDays,
-                title: "تقسيط حتى 5 سنوات",
-                sub: "مباشرة مع الشركة، بلا فوائد",
-              },
-            ].map(({ Icon, title, sub }) => (
-              <div className="trust-item" key={title}>
-                <Icon />
-                <div>
-                  <strong>{title}</strong>
-                  <small>{sub}</small>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <section className="enquiry-section" id="request">
-          <div className="container enquiry-layout">
-            <div className="enquiry-intro">
-              <div className="eyebrow">خطوتك الأولى تبدأ هون</div>
-              <h2 className="section-heading">
-                أرض أقرب لحلمك.
-                <br />
-                وعرض يستحق تسأل عنه.
-              </h2>
-              <p>
-                اختر المكان اللي يناسبك، واعرف قيمة التوفير على أرضك. مستشار طابو معك لتكون كل
-                التفاصيل واضحة قبل أي قرار.
-              </p>
-              <div className="enquiry-benefits">
-                <span>
-                  <Check />
-                  خصم 10% على السعر الكلي، وليس الدفعة الأولى
-                </span>
-                <span>
-                  <Check />
-                  خيارات في قراوة بني زيد وفرخة والمزرعة الغربية
-                </span>
-                <span>
-                  <Check />
-                  سند باسمك وإجراءات تتولاها الشركة
-                </span>
-              </div>
-            </div>
             <form
+              id="request"
               className="lead-form"
               onSubmit={handleSubmit}
               noValidate
@@ -403,7 +348,33 @@ function Index() {
               </p>
             </form>
           </div>
+          <div className="image-caption">
+            <MapPin size={12} />
+            من أراضي طابو في فلسطين
+          </div>
         </section>
+        <div className="trust-strip">
+          <div className="container trust-inner">
+            {[
+              { Icon: FileCheck2, title: "سند ملكية جاهز", sub: "نتولى إجراءات التسجيل" },
+              { Icon: LandPlot, title: "انتفاع فوري بالأرض", sub: "من اليوم الأول" },
+              { Icon: Zap, title: "طرق معبّدة وكهرباء", sub: "بنية تحتية جاهزة" },
+              {
+                Icon: CalendarDays,
+                title: "تقسيط حتى 5 سنوات",
+                sub: "مباشرة مع الشركة، بلا فوائد",
+              },
+            ].map(({ Icon, title, sub }) => (
+              <div className="trust-item" key={title}>
+                <Icon />
+                <div>
+                  <strong>{title}</strong>
+                  <small>{sub}</small>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
         <section id="lands" className="section container">
           <div className="section-top">
             <div>
