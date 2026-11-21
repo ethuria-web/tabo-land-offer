@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 export const buttonVariants = cva('tabo-button', {
   variants: {
-    variant: { default: 'tabo-button-primary', primary: 'tabo-button-primary', outline: 'tabo-button-outline', ghost: 'tabo-button-ghost', light: 'tabo-button-light', secondary: 'bg-secondary text-secondary-foreground', destructive: 'bg-destructive text-primary-foreground', link: 'text-primary underline-offset-4 hover:underline' },
+    variant: { default: 'tabo-button-primary', primary: 'tabo-button-primary', cta: 'tabo-button-cta', outline: 'tabo-button-outline', ghost: 'tabo-button-ghost', light: 'tabo-button-light', secondary: 'bg-secondary text-secondary-foreground', destructive: 'bg-destructive text-primary-foreground', link: 'text-primary underline-offset-4 hover:underline' },
     size: { default: '', sm: 'min-h-8 px-3 text-sm', lg: 'min-h-12 px-8', icon: 'h-9 w-9 p-0' },
   }, defaultVariants: { variant: 'default', size: 'default' },
 });

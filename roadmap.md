@@ -1,5 +1,6 @@
 # Roadmap
-- [ ] Move the existing enquiry form into the hero, remove its former intro section, and verify layout and submission.
+- [x] Implement the attached typography, header, orange CTA, and discount presentation refinements while preserving existing functionality.
+- [x] Move the existing enquiry form into the hero, remove its former intro section, and verify layout and submission.
 - [x] Restore reference header with top offer/countdown, logo, adjacent visible phone and WhatsApp, and no navigation.
 - [x] Apply brown/gold/dark-gray brand tokens and the official site's Arabic font as a temporary fallback.
 - [x] Apply the supplied Hacen Tunisia light, regular, and bold font files throughout the page.

@@ -156,18 +156,32 @@ function Index() {
   return (
     <>
       <div className="offer-bar">
-        <span className="countdown-badge" aria-live="polite">
-          {active
-            ? remaining !== null
-              ? `متبقّي ${remaining} يومًا`
-              : "حتى نهاية السنة"
-            : "انتهى العرض"}
-        </span>
-        <span>
-          {active
-            ? "خصم 10% على سعر الأرض الكلي – ينتهي العرض 31 كانون الأول 2026"
-            : "انتهى عرض نهاية 2026 – اطلب تفاصيل الخيارات الحالية"}
-        </span>
+        <div className="container offer-inner">
+          {active ? (
+            <>
+              <strong className="offer-highlight" aria-label="خصم 10%">
+                <span>خصم</span>
+                <bdi>10<span>%</span></bdi>
+              </strong>
+              <div className="offer-details">
+                <span>على سعر الأرض الكلي</span>
+                <span className="offer-deadline">
+                  ينتهي العرض <time dateTime="2026-12-31">31 كانون الأول 2026</time>
+                </span>
+              </div>
+            </>
+          ) : (
+            <strong className="offer-ended">انتهى عرض نهاية 2026 – اطلب تفاصيل الخيارات الحالية</strong>
+          )}
+          <span className="countdown-badge" aria-live="polite">
+            <Clock3 aria-hidden="true" />
+            {active
+              ? remaining !== null
+                ? `متبقّي ${remaining} يومًا`
+                : "حتى نهاية السنة"
+              : "انتهى العرض"}
+          </span>
+        </div>
       </div>
       <header className="campaign-header">
         <div className="container header">
@@ -210,11 +224,12 @@ function Index() {
                 <span>بسند طابو باسمك.</span>
               </h1>
               <div className="hero-discount">
-                <span className="discount-number">
-                  10<span>%</span>
-                </span>
+                <strong className="discount-lockup" aria-label="خصم 10%">
+                  <span className="discount-label">خصم</span>
+                  <bdi className="discount-number">10<span>%</span></bdi>
+                </strong>
                 <div className="discount-copy">
-                  خصم على سعر الأرض الكلي
+                  على سعر الأرض الكلي
                   <br />
                   <strong>وبداية لمستقبل إلك ولعيلتك</strong>
                 </div>
@@ -224,7 +239,7 @@ function Index() {
                 حتى 5 سنوات، بلا فوائد ولا وسطاء.
               </p>
               <div className="hero-actions">
-                <Button asChild>
+                <Button asChild variant="cta">
                   <a href="#request">
                     {CTA}
                     <ArrowLeft />
@@ -329,7 +344,7 @@ function Index() {
                   {errors.submit}
                 </p>
               )}
-              <Button type="submit" className="submit-button" disabled={submitting}>
+              <Button variant="cta" type="submit" className="submit-button" disabled={submitting}>
                 {submitting ? (
                   <>
                     <LoaderCircle className="spinner" />
@@ -418,7 +433,7 @@ function Index() {
                     </div>
                   </div>
                   <Button
-                    variant="outline"
+                    variant="cta"
                     className="land-cta"
                     onClick={() => chooseLocation(land.id)}
                   >
@@ -553,7 +568,7 @@ function Index() {
               </p>
             </div>
             <div className="final-actions">
-              <Button asChild variant="light">
+              <Button asChild variant="cta">
                 <a href="#request">
                   {CTA}
                   <ArrowLeft />
@@ -594,7 +609,7 @@ function Index() {
         </div>
       </footer>
       <div className="mobile-cta">
-        <Button asChild>
+        <Button asChild variant="cta">
           <a href="#request">
             {CTA}
             <ArrowLeft />

@@ -33,4 +33,5 @@ use the editor.
 - Keep campaign constants and phone validation in `src/lib/offer.ts` so the page and server share validated rules.
 - Enquiries use a validated public insert-only server function with a dynamically imported privileged client; lead data has no visitor read access.
 - Use reusable button variants and global semantic design tokens for all campaign controls and styling.
+- Use shared role-based typography tokens with breakpoint overrides, and a dedicated CTA button variant, to keep hierarchy and offer-request controls consistent across sections.
 - Load self-hosted brand fonts through asset pointers and global font-face declarations so typography does not depend on third-party stylesheet delivery.
