@@ -430,9 +430,7 @@ function Index() {
             <div className="center-heading">
               <div className="eyebrow">طريق واضح لملكية حقيقية</div>
               <h2 className="section-heading">
-                من التسجيل إلى السند باسمك…
-                <br />
-                في أربع خطوات
+                من التسجيل إلى السند باسمك 
               </h2>
             </div>
             <div className="steps-grid">
