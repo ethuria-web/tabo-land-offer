@@ -685,18 +685,6 @@ h1 {
   font-size: var(--text-button);
   padding-inline: 16px;
 }
-.availability-note {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  margin-top: 22px;
-  font-size: var(--text-small);
-  color: var(--muted-foreground);
-}
-.availability-note svg {
-  width: 14px;
-}
 .steps-section {
   background: var(--muted);
 }

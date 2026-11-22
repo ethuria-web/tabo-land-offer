@@ -8,7 +8,6 @@ import {
   Check,
   CircleCheck,
   FileCheck2,
-  Info,
   LoaderCircle,
   LockKeyhole,
   MapPin,
@@ -420,10 +419,6 @@ function Index() {
               </article>
             ))}
           </div>
-          <p className="availability-note">
-            <Info />
-            التوفّر والأسعار النهائية حسب القطعة؛ اطلب أحدث الخيارات من مستشارنا.
-          </p>
         </section>
         <section id="steps" className="section steps-section">
           <div className="container">
