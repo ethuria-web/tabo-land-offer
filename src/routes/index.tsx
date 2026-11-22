@@ -503,10 +503,10 @@ function Index() {
                 قبل ما تختار
               </h2>
               <p>خذ وقتك بالقرار، وخلّي استفساراتك علينا.</p>
-              <Button asChild variant="outline">
-                <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-                  <MessageCircle />
-                  اسألنا عبر واتساب
+              <Button asChild variant="cta">
+                <a href="#request">
+                  {CTA}
+                  <ArrowLeft />
                 </a>
               </Button>
             </div>
