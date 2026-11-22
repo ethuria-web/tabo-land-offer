@@ -14,7 +14,6 @@ import {
   MapPin,
   Phone,
   Plus,
-  ShieldCheck,
   X,
   Zap,
   Building2,
@@ -244,17 +243,7 @@ function Index() {
                     <ArrowLeft />
                   </a>
                 </Button>
-                <Button asChild variant="ghost">
-                  <a href="#lands">
-                    اكتشف مواقع الأراضي
-                    <ArrowLeft />
-                  </a>
-                </Button>
               </div>
-              <p className="hero-note">
-                <ShieldCheck />
-                الطلب للاستفسار فقط، ولا يُلزمك بالشراء
-              </p>
             </div>
             <form
               id="request"
@@ -358,7 +347,7 @@ function Index() {
               </Button>
               <p className="privacy-note">
                 <LockKeyhole />
-                بياناتك محفوظة، والطلب للاستفسار فقط
+                الطلب للاستفسار فقط، ولا يُلزمك بالشراء
               </p>
             </form>
           </div>
