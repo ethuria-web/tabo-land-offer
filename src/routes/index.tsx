@@ -236,14 +236,6 @@ function Index() {
                 أراضٍ سكنية قرب رام الله وسلفيت، بطرق معبّدة وشبكة كهرباء. دفعة أولى من 5,000 وتقسيط
                 حتى 5 سنوات، بلا فوائد ولا وسطاء.
               </p>
-              <div className="hero-actions">
-                <Button asChild variant="cta">
-                  <a href="#request">
-                    {CTA}
-                    <ArrowLeft />
-                  </a>
-                </Button>
-              </div>
             </div>
             <form
               id="request"
