@@ -559,27 +559,11 @@ function Index() {
         </section>
       </main>
       <footer className="footer container">
-        <p className="terms">
-          شروط العرض: خصم 10% على سعر الأرض الكلي في مخططات قراوة بني زيد وفرخة والمزرعة الغربية.
-          ساري حتى نهاية يوم 31/12/2026 أو حتى نفاد القطع المتاحة، أيهما أسبق. الدفعة الأولى من
-          5,000 دولار (قراوة وفرخة) ومن 5,000 دينار (المزرعة الغربية). تقسيط حتى 5 سنوات، بلا فوائد
-          ولا وسطاء. العرض خاضع لشروط طابو وقد تختلف التفاصيل حسب القطعة.
-        </p>
         <div className="footer-bottom">
           <span>© 2026 طابو — شركة الاتحاد للإعمار والاستثمار. جميع الحقوق محفوظة.</span>
           <div className="footer-links">
-            <a
-              href="https://www.tabo.ps/ar/privacy-policy"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              سياسة الخصوصية
-            </a>
             <a href={PHONE} dir="ltr">
               +972 2 297 4992
-            </a>
-            <a href="https://www.tabo.ps/ar" target="_blank" rel="noopener noreferrer">
-              موقع طابو الرسمي
             </a>
           </div>
         </div>
