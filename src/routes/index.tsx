@@ -373,10 +373,7 @@ function Index() {
           <div className="section-top">
             <div>
               <div className="eyebrow">ثلاثة مواقع… وحلم واحد</div>
-              <h2 className="section-heading">اختر المكان اللي بتشبهك أرضه</h2>
-              <p className="section-description">
-                مخططات منظّمة، مساحات خضراء، وإطلالات فلسطينية. والخصم يشملها جميعًا.
-              </p>
+              <h2 className="section-heading">مخططات منظمة وإطلالات مميزة</h2>
             </div>
             <span className="section-index">01 / مواقع الأراضي</span>
           </div>
