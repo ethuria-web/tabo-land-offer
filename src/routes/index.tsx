@@ -9,7 +9,6 @@ import {
   CircleCheck,
   FileCheck2,
   Info,
-  LandPlot,
   LoaderCircle,
   LockKeyhole,
   MapPin,
@@ -372,7 +371,6 @@ function Index() {
           <div className="container trust-inner">
             {[
               { Icon: FileCheck2, title: "سند ملكية جاهز", sub: "نتولى إجراءات التسجيل" },
-              { Icon: LandPlot, title: "انتفاع فوري بالأرض", sub: "من اليوم الأول" },
               { Icon: Zap, title: "طرق معبّدة وكهرباء", sub: "بنية تحتية جاهزة" },
               {
                 Icon: CalendarDays,
