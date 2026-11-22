@@ -503,6 +503,12 @@ function Index() {
                 قبل ما تختار
               </h2>
               <p>خذ وقتك بالقرار، وخلّي استفساراتك علينا.</p>
+              <Button asChild variant="outline">
+                <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
+                  <MessageCircle />
+                  اسألنا عبر واتساب
+                </a>
+              </Button>
             </div>
             <div className="faq-list">
               {faqs.map(([q, a]) => (
