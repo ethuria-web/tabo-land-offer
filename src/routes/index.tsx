@@ -424,7 +424,7 @@ function Index() {
                       </strong>
                     </div>
                     <div>
-                      <small>دفعة أولى من</small>
+                      <small>دفعة أولى</small>
                       <strong>
                         <bdi>5,000</bdi> {land.currency}
                       </strong>
